@@ -1,0 +1,38 @@
+server:
+  port: 8761
+
+
+eureka:  client:    register-with-eureka: false
+    fetch-registry: false
+  server:    enable-self-preservation: true
+    renewal-threshold-update-interval-ms: 900000
+    renewal-percent-threshold: 0.85
+    eviction-interval-timer-in-ms: 60000
+    
+
+ribbon:  eureka:    enabled: true
+  eager-load:    enabled: true
+    
+    
+logging:
+  path: ${LLOC:/srv/ntraders/logs}
+  file: ${logging.path}/${LFILE:eureka-server.log}
+  level:
+    root: ${LLVL:INFO}   
+    
+    
+#eureka.client.register-with-eureka =false
+#eureka.client.fetch-registry=false
+#eureka.server.enable-self-preservation=true
+#eureka.server.renewal-threshold-update-interval-ms=900000
+#eureka.server.renewal-percent-threshold=0.85
+#eureka.server.eviction-interval-timer-in-ms=60000
+#
+#ribbon.eureka.enabled=true
+#ribbon.eager-load.enabled=true
+#
+#logging.path=/SANTHOSH/NIHARIKA-TRADERS/logs
+#logging.file=/SANTHOSH/NIHARIKA-TRADERS/logs/app-eureka-server.log
+#logging.level.root = INFO
+
+

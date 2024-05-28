@@ -1,0 +1,10 @@
+
+.project
+*.prefs
+*.classpath
+*.factorypath
+*nbactions.xml
+*.iml
+target
+“. idea”
+.idea/*
